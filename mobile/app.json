@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Anon",
+    "slug": "anon-ecommerce-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/newsletter.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/newsletter.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anon.ecommerce"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/newsletter.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anon.ecommerce"
+    },
+    "scheme": "anon"
+  }
+}

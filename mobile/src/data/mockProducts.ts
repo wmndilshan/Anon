@@ -1,0 +1,183 @@
+import type { ImageSourcePropType } from "react-native";
+
+export type Product = {
+  id: string;
+  title: string;
+  category: string;
+  categorySlug: string;
+  price: number;
+  compareAt?: number;
+  image: ImageSourcePropType;
+  badge?: "sale" | "new" | "percent";
+  discountPct?: number;
+  rating: number;
+};
+
+/* Metro requires static paths for bundled images */
+const I = {
+  shampoo: require("../../assets/images/products/shampoo.jpg") as ImageSourcePropType,
+  clothes1: require("../../assets/images/products/clothes-1.jpg") as ImageSourcePropType,
+  jacket3: require("../../assets/images/products/jacket-3.jpg") as ImageSourcePropType,
+  shirt1: require("../../assets/images/products/shirt-1.jpg") as ImageSourcePropType,
+  jacket5: require("../../assets/images/products/jacket-5.jpg") as ImageSourcePropType,
+  clothes3: require("../../assets/images/products/clothes-3.jpg") as ImageSourcePropType,
+  shoe2: require("../../assets/images/products/shoe-2.jpg") as ImageSourcePropType,
+  watch3: require("../../assets/images/products/watch-3.jpg") as ImageSourcePropType,
+  watch1: require("../../assets/images/products/watch-1.jpg") as ImageSourcePropType,
+  party1: require("../../assets/images/products/party-wear-1.jpg") as ImageSourcePropType,
+  sports2: require("../../assets/images/products/sports-2.jpg") as ImageSourcePropType,
+  shoe1: require("../../assets/images/products/shoe-1.jpg") as ImageSourcePropType,
+  shorts1: require("../../assets/images/products/shorts-1.jpg") as ImageSourcePropType,
+  jewellery1: require("../../assets/images/products/jewellery-1.jpg") as ImageSourcePropType,
+};
+
+export const MOCK_PRODUCTS: Product[] = [
+  {
+    id: "p-deal",
+    title: "Shampoo & face care pack",
+    category: "cosmetics",
+    categorySlug: "cosmetics",
+    price: 150,
+    compareAt: 200,
+    image: I.shampoo,
+    rating: 3,
+  },
+  {
+    id: "p-dress",
+    title: "Relaxed Short full Sleeve T-Shirt",
+    category: "Clothes",
+    categorySlug: "dress",
+    price: 45,
+    compareAt: 12,
+    image: I.clothes1,
+    rating: 4,
+  },
+  {
+    id: "p1",
+    title: "Mens Winter Leathers Jackets",
+    category: "jacket",
+    categorySlug: "jacket",
+    price: 48,
+    compareAt: 75,
+    image: I.jacket3,
+    badge: "percent",
+    discountPct: 15,
+    rating: 3,
+  },
+  {
+    id: "p2",
+    title: "Pure Garment Dyed Cotton Shirt",
+    category: "shirt",
+    categorySlug: "shirt",
+    price: 45,
+    compareAt: 56,
+    image: I.shirt1,
+    badge: "sale",
+    rating: 3,
+  },
+  {
+    id: "p3",
+    title: "MEN Yarn Fleece Full-Zip Jacket",
+    category: "Jacket",
+    categorySlug: "jacket",
+    price: 58,
+    compareAt: 65,
+    image: I.jacket5,
+    rating: 3,
+  },
+  {
+    id: "p4",
+    title: "Black Floral Wrap Midi Skirt",
+    category: "skirt",
+    categorySlug: "skirt",
+    price: 25,
+    compareAt: 35,
+    image: I.clothes3,
+    badge: "new",
+    rating: 5,
+  },
+  {
+    id: "p5",
+    title: "Casual Men's Brown shoes",
+    category: "casual",
+    categorySlug: "footwear",
+    price: 99,
+    compareAt: 105,
+    image: I.shoe2,
+    rating: 5,
+  },
+  {
+    id: "p6",
+    title: "Pocket Watch Leather Pouch",
+    category: "watches",
+    categorySlug: "watch",
+    price: 150,
+    compareAt: 170,
+    image: I.watch3,
+    badge: "sale",
+    rating: 3,
+  },
+  {
+    id: "p7",
+    title: "Smart watche Vital Plus",
+    category: "watches",
+    categorySlug: "watch",
+    price: 100,
+    compareAt: 120,
+    image: I.watch1,
+    rating: 4,
+  },
+  {
+    id: "p8",
+    title: "Womens Party Wear Shoes",
+    category: "party wear",
+    categorySlug: "footwear",
+    price: 25,
+    compareAt: 30,
+    image: I.party1,
+    badge: "sale",
+    rating: 3,
+  },
+  {
+    id: "p9",
+    title: "Trekking & Running Shoes - black",
+    category: "sports",
+    categorySlug: "footwear",
+    price: 58,
+    compareAt: 64,
+    image: I.sports2,
+    badge: "sale",
+    rating: 3,
+  },
+  {
+    id: "p10",
+    title: "Men's Leather Formal Wear shoes",
+    category: "formal",
+    categorySlug: "footwear",
+    price: 50,
+    compareAt: 65,
+    image: I.shoe1,
+    rating: 4,
+  },
+  {
+    id: "p11",
+    title: "Better Basics French Terry Sweatshorts",
+    category: "shorts",
+    categorySlug: "shorts",
+    price: 78,
+    compareAt: 85,
+    image: I.shorts1,
+    badge: "sale",
+    rating: 3,
+  },
+  {
+    id: "p12",
+    title: "Rose Gold diamonds Earring",
+    category: "jewellery",
+    categorySlug: "jewelry",
+    price: 1990,
+    compareAt: 2000,
+    image: I.jewellery1,
+    rating: 3,
+  },
+];

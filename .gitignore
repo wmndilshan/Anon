@@ -1,0 +1,9 @@
+# Root-level local/demo artifacts
+index.html
+website-demo-image/
+assets/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.log
