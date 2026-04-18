@@ -73,10 +73,10 @@ export class CatalogService {
     const orderBy: Prisma.ProductOrderByWithRelationInput[] = [];
     switch (query.sort) {
       case 'price_asc':
-        orderBy.push({ variants: { _min: { price: 'asc' } } });
+        orderBy.push({ variants: { _min: { price: 'asc' } } } as Prisma.ProductOrderByWithRelationInput);
         break;
       case 'price_desc':
-        orderBy.push({ variants: { _max: { price: 'desc' } } });
+        orderBy.push({ variants: { _max: { price: 'desc' } } } as Prisma.ProductOrderByWithRelationInput);
         break;
       case 'popular':
         orderBy.push({ reviews: { _count: 'desc' } });
